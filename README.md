@@ -18,7 +18,7 @@
 
 ### Links
 - Repository URL: [Repository](https://github.com/fabioalcocer/product-page)
-- Live Site URL: [Live](https://e-commerce-x.vercel.app)
+- Live Site URL: [Live](https://fabio-product-page.vercel.app/)
 
 ## My process
 
