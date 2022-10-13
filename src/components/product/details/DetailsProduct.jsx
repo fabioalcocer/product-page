@@ -44,7 +44,7 @@ export default ({ objectProduct }) => {
             (1 - objectProduct.discount)
           ).toFixed(2)}
         </span>
-        <span className='mr-auto rounded-md bg-pale-orange py-1 px-2 text-orange-primary'>
+        <span className='mr-auto rounded-md bg-pale-orange py-1 px-2 ml-2 lg:-ml-6 text-orange-primary'>
           {objectProduct.discount * 100}%
         </span>
         <span className='text-right text-lg text-grayish-blue line-through md:col-span-2 md:text-left'>
@@ -54,21 +54,21 @@ export default ({ objectProduct }) => {
       <div className='grid grid-cols-3 gap-4 font-bold md:grid-cols-[1fr_1.7fr]'>
         <div className='col-span-3 flex items-baseline justify-between rounded-md bg-gray-200 py-2 px-5 pb-3 md:col-span-1'>
           <button
-            className='text-3xl text-orange-primary'
+            className='text-3xl text-orange-primary hover:text-orange-300'
             onClick={decrementCount}
           >
             -
           </button>
           <span className='text-xl'>{count}</span>
           <button
-            className='text-3xl text-orange-primary'
+            className='text-3xl text-orange-primary hover:text-orange-300'
             onClick={() => setCount(count + 1)}
           >
             +
           </button>
         </div>
         <button
-          className='col-span-3 flex items-center justify-center gap-x-3 rounded-md bg-orange-primary py-3 text-white transition-all hover:bg-orange-700 md:col-span-1'
+          className='col-span-3 flex items-center justify-center gap-x-3 rounded-md bg-orange-primary py-3 text-white transition-all duration-300 hover:bg-orange-300 hover:brightness-105 hover:shadow-md hover:shadow-orange-300/50 md:col-span-1'
           onClick={handleAddToCart}
         >
           <CartIcon fill='#fff' className='fill-white' />

@@ -38,7 +38,7 @@ const MainHeader = () => {
         <nav
           className={`font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0 ${
             isOpenMenu
-              ? 'absolute top-0 left-0 z-10 flex h-full w-4/5 flex-col gap-y-[21px] bg-white p-8'
+              ? 'absolute top-0 bottom-0 left-0 z-50 flex min-h-screen w-4/5 flex-col gap-y-[21px] bg-white p-8'
               : 'hidden'
           }`}
         >
@@ -57,14 +57,14 @@ const MainHeader = () => {
         <div className='flex gap-4'>
           <button
             onClick={() => setOpenDetailsCart(!isOpenDetailsCart)}
-            className='relative'
+            className='relative mr-3'
           >
             <CartIcon />
             <span className='rigth-0 absolute top-0 translate-x-1 rounded-full bg-orange-primary px-2 text-xs font-bold text-white'>
               {totalQuantityProduct}
             </span>
           </button>
-          <img src={AvatarImage} alt='' className='w-10' />
+          <img src={AvatarImage} alt='' className='w-10 hover:border-2 hover:border-orange-500 rounded-full' />
           {isOpenDetailsCart && <CartDetailsHeader />}
         </div>
       </header>
