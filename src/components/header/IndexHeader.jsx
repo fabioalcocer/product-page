@@ -64,7 +64,11 @@ const MainHeader = () => {
               {totalQuantityProduct}
             </span>
           </button>
-          <img src={AvatarImage} alt='' className='w-10 hover:border-2 hover:border-orange-500 rounded-full' />
+          <img
+            src={AvatarImage}
+            alt=''
+            className='w-10 rounded-full hover:border-2 hover:border-orange-500'
+          />
           {isOpenDetailsCart && <CartDetailsHeader />}
         </div>
       </header>

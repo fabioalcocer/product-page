@@ -45,7 +45,7 @@ export default () => {
         ))}
         {cartProducts.length !== 0 && (
           <div className='px-6 pb-8'>
-            <button className='w-full rounded-md bg-orange-primary py-4 text-white transition-all hover:bg-orange-700'>
+            <button className='w-full rounded-md bg-orange-primary py-4 text-white transition-all duration-300 hover:bg-orange-300 hover:shadow-md hover:shadow-orange-300/50 hover:brightness-105'>
               Checkout
             </button>
           </div>

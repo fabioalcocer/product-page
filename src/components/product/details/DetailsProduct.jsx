@@ -4,7 +4,7 @@ import { useState, useContext } from 'react'
 
 export default ({ objectProduct }) => {
   const { addCartProducts } = useContext(useCartDetails)
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
 
   const decrementCount = () => {
     if (count === 0) return
@@ -22,7 +22,7 @@ export default ({ objectProduct }) => {
       title: objectProduct.title,
       quantity: count || 1
     })
-    setCount(0)
+    setCount(1)
   }
 
   return (
@@ -44,7 +44,7 @@ export default ({ objectProduct }) => {
             (1 - objectProduct.discount)
           ).toFixed(2)}
         </span>
-        <span className='mr-auto rounded-md bg-pale-orange py-1 px-2 ml-2 lg:-ml-6 text-orange-primary'>
+        <span className='mr-auto ml-2 rounded-md bg-pale-orange py-1 px-2 text-orange-primary lg:-ml-6'>
           {objectProduct.discount * 100}%
         </span>
         <span className='text-right text-lg text-grayish-blue line-through md:col-span-2 md:text-left'>
@@ -68,7 +68,7 @@ export default ({ objectProduct }) => {
           </button>
         </div>
         <button
-          className='col-span-3 flex items-center justify-center gap-x-3 rounded-md bg-orange-primary py-3 text-white transition-all duration-300 hover:bg-orange-300 hover:brightness-105 hover:shadow-md hover:shadow-orange-300/50 md:col-span-1'
+          className='col-span-3 flex items-center justify-center gap-x-3 rounded-md bg-orange-primary py-3 text-white transition-all duration-300 hover:bg-orange-300 hover:shadow-md hover:shadow-orange-300/50 hover:brightness-105 md:col-span-1'
           onClick={handleAddToCart}
         >
           <CartIcon fill='#fff' className='fill-white' />
